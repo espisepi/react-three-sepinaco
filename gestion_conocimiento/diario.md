@@ -6,6 +6,9 @@
 -- https://r3f.docs.pmnd.rs/getting-started/introduction
 -- npm install three @types/three @react-three/fiber @react-three/drei
 
+- Instalar libreria de fisicas phyjs y poner en componente ejemplo de vehicle physics.
+-- https://lo-th.github.io/phy/docs/index.html#manual/Installation
+
 - Añadir pagina principal home para seleccionar apps
 
 - Añadir App1 (videopoints visualizer), App2(carrousel products)...
