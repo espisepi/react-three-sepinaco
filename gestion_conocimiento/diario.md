@@ -3,6 +3,8 @@
 - Crear proyecto react typescript con vite desde terminal
 
 - Añadir librerias react-three-fiber y react-three-drei. Añadir un Canvas con un Box y OrbitControls como símbolo de hola mundo.
+-- https://r3f.docs.pmnd.rs/getting-started/introduction
+-- npm install three @types/three @react-three/fiber @react-three/drei
 
 - Añadir pagina principal home para seleccionar apps
 
