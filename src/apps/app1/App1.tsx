@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame, type ThreeElements } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import CameraControlsManager from '../../shared/r3f/camera-controls/manager/CameraControlsManager'
+import { CameraControlTypes } from '../../shared/r3f/camera-controls/types/CameraControlsType'
 
 function Box(props: ThreeElements['mesh']) {
     const meshRef = useRef<THREE.Mesh>(null!)
@@ -44,7 +45,7 @@ function App1() {
             <Box position={[-1.2, 0, 0]} />
             <Box position={[1.2, 0, 0]} />
 
-            <OrbitControls />
+            <CameraControlsManager type={CameraControlTypes.ORBIT} />
         </Canvas>
     )
 }
