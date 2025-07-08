@@ -8,6 +8,27 @@
 
 - Instalar libreria de fisicas phyjs y poner en componente ejemplo de vehicle physics.
 -- https://lo-th.github.io/phy/docs/index.html#manual/Installation
+-- npm install --save phy-engine
+-- Option 1 _ Copy to public
+Phy use worker so if you use compact option you have to
+copy node_modules/phy-engine/compact/ to your /public folder
+Or if you use non compact
+copy node_modules/phy-engine/build/ to your /public folder
+-- Option 2 _ add vite.config.js
+create vite.config.js file on root with this code
+import { defineConfig } from 'vite';
+export default defineConfig({
+  optimizeDeps: {
+    exclude: ['phy-engine'],
+  },
+})
+And on init use this setting
+phy.init({ type:'HAVOK', worker:true, useLocal:true, useModule:true, scene:scene, callback:init });
+
+
+
+
+
 
 - Añadir pagina principal home para seleccionar apps
 
