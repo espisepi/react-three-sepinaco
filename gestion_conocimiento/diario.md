@@ -27,7 +27,8 @@ phy.init({ type:'HAVOK', worker:true, useLocal:true, useModule:true, scene:scene
 
 
 
-
+- añadir use-cannon y crear avion sketchbook siguiendo el codigo original de sketchbook
+-- https://github.com/pmndrs/use-cannon/blob/master/packages/react-three-cannon-examples/src/demos/demo-Heightfield.tsx
 
 
 - Añadir pagina principal home para seleccionar apps
