@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background-iframe.js - Custom iframe background for any website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #111;
+            background: #f2f2f2;
+            padding-bottom: 100px;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        code,
+        pre {
+            background: #eee;
+            padding: 0.5rem;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+
+        button.copy {
+            background: #000;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        iframe.demo {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>background-iframe.js</h1>
+        <p>Set a fullscreen iframe as background in any website – easy and safe.</p>
+    </header>
+
+    <main>
+        <h2>1. Paste this in your HTML</h2>
+        <pre id="code-block">
+&lt;script 
+  src="https://raw.githubusercontent.com/espisepi/react-three-sepinaco/refs/heads/main/experimentos/script-iframe-modificador/index12.js"
+  data-url="https://real-julipichan-posidonia-shop.vercel.app/about"&gt;&lt;/script&gt;
+  </pre>
+        <button class="copy" onclick="copyCode()">Copy Script</button>
+
+        <h2>2. What does it do?</h2>
+        <p>
+            This script adds a full-screen <code>&lt;iframe&gt;</code> behind all your content, and forces every element
+            on the page to be transparent. It’s perfect for animated or interactive backgrounds.
+        </p>
+
+        <h2>3. Live demo below 👇</h2>
+        <iframe class="demo" srcdoc='
+      <html>
+        <head>
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              font-family: sans-serif;
+              height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              color: white;
+              z-index: 1;
+            }
+            h1 {
+              font-size: 2rem;
+              position: relative;
+              z-index: 2;
+            }
+          </style>
+        </head>
+        <body>
+          <h1>Page with background-iframe.js</h1>
+          <script src="https://cdn.jsdelivr.net/gh/usuario/repositorio/background-iframe.min.js" data-url="https://real-julipichan-posidonia-shop.vercel.app/about"></script>
+        </body>
+      </html>
+    '>
+        </iframe>
+    </main>
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById('code-block').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Copied to clipboard!');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
